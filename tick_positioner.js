@@ -1,5 +1,10 @@
-;
-(function(Highcharts) {
+(function(factory) {
+    if (typeof module === 'object' && module.exports) {
+        module.exports = factory;
+    } else {
+        factory(Highcharts);
+    }
+}(function(Highcharts) {
 
   function TickPositioner() {
     var _self;
@@ -144,4 +149,4 @@
     chart.redraw();
     chart.axes[0].update();
   });
-}(Highcharts));
+}));
